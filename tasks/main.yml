@@ -1,0 +1,9 @@
+---
+# tasks file for ansible-role-resolv-conf
+- name: Configure /etc/resolv.conf
+  template:
+    src: resolv.conf.j2
+    dest: /tmp/resolv.conf
+    owner: root
+    group: root
+    mode: 0644
