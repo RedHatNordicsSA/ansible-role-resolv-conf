@@ -3,7 +3,7 @@ galaxy_info:
   author: pgustafs
   description: Setup /etc/resolv.conf
   company: "Red Hat"
-  license: "license (GPLv2, CC-BY, etc)""
+  license: "license (GPLv2, CC-BY, etc)"
   min_ansible_version: 2.0
   platforms:
     - name: EL
