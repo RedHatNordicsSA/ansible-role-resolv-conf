@@ -1,4 +1,8 @@
 {{ ansible_managed }}
+search {% for domain in resolv_conf_search  %}
+{{ domain }}
+{%- if loop.first %} {% endif %}
+{% endfor %}
 {% for server in resolv_conf_nameservers %}
 nameserver {{ server }}
 {% endfor %}
