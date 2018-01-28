@@ -3,7 +3,7 @@
 - name: Configure /etc/resolv.conf
   template:
     src: resolv.conf.j2
-    dest: /tmp/resolv.conf
+    dest: /etc/resolv.conf
     owner: root
     group: root
     mode: 0644
