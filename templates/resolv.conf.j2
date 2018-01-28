@@ -1,4 +1,4 @@
 {{ ansible_managed }}
-{% for nameserver in resolv_conf_nameservers %}
-nameserver {{ nameserver }}
+{% for server in resolv_conf_nameservers %}
+nameserver {{ server }}
 {% endfor %}
