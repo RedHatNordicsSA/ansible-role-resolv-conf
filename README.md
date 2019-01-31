@@ -1,7 +1,7 @@
 ansible-role-resolv-conf
 =========================
 
-Creates default resolv.conf name resolution settings for VM to reach DNS servers. 
+Creates default resolv.conf name resolution settings for VM to reach DNS servers.
 
 Requirements
 ------------
@@ -34,4 +34,5 @@ BSD
 Author Information
 ------------------
 
+Peter Gustafsson pgustafs@redhat.com
 [Red Hat](https://redhatnordicssa.github.io/)
