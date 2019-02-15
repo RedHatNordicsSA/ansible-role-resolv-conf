@@ -1,8 +1,8 @@
 {{ ansible_managed }}
 {% if resolv_conf_search %}
-search {% for domain in resolv_conf_search  %}
-{{ domain }}
-{%- if loop.first %} {% endif %}
+search {% for domain in resolv_conf_search %}
+{{domain}}
+{%- if not loop.last %} {% endif %}
 {% endfor %}{{''}}
 {% endif %}
 {% for server in resolv_conf_nameservers %}

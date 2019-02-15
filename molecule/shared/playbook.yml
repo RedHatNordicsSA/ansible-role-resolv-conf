@@ -1,0 +1,10 @@
+- name: converge
+  hosts: all
+  become: true
+  roles:
+    - role: ansible-role-resolv-conf
+      vars:
+        resolv_conf_search:
+          - infra.example.com
+          - example.com
+  post_tasks: []
