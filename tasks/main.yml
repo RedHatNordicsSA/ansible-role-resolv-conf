@@ -1,4 +1,18 @@
+---
 # tasks file for ansible-role-resolv-conf
+
+- name: Tell network manager to keep hands off from resolv.conf
+  copy:
+    dest: /etc/NetworkManager/conf.d/90-dns-none.conf
+    content: |
+      [main]
+      dns=none
+
+- name: restart network manager
+  ansible.builtin.systemd:
+    name: NetworkManager
+    state: reloaded
+
 - name: Configure /etc/resolv.conf
   template:
     src: resolv.conf.j2
